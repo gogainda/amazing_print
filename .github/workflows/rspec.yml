@@ -14,12 +14,7 @@ jobs:
         os:
           - ubuntu
         ruby:
-          - "2.5"
-          - "2.6"
           - "2.7"
-          - "3.0"
-          - "head"
-          - "jruby"
           - truffleruby-head
     runs-on: ${{ matrix.os }}-latest
     continue-on-error: ${{ endsWith(matrix.ruby, 'head') || matrix.ruby == 'debug' }}
